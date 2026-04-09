@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tharaka & Imasha — Wedding Invitation</title>
+  <meta name="description" content="You are cordially invited to celebrate the wedding of Tharaka & Imasha. View details, venue, and RSVP now.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💍</text></svg>">
+</head>
+<body>
+
+  <!-- Loading Screen -->
+  <div class="loading-screen" id="loadingScreen">
+    <div class="loading-hearts">
+      <div class="loading-heart"></div>
+      <div class="loading-heart"></div>
+      <div class="loading-heart"></div>
+    </div>
+    <div class="loading-text">Together Forever</div>
+  </div>
+
+  <!-- Floating Particles -->
+  <div class="particles" id="particles"></div>
+
+  <!-- Background Music -->
+  <audio id="bgMusic" loop preload="auto" autoplay>
+    <source src="music/A_Thousand_Years-528635-mobiles24.mp3" type="audio/mpeg">
+  </audio>
+  <button class="music-btn" id="musicBtn" title="Toggle Music">
+    <span class="music-icon" id="musicIcon">🎵</span>
+    <span class="music-pulse"></span>
+  </button>
+
+  <!-- Navigation -->
+  <nav class="nav" id="mainNav">
+    <a href="#home" class="nav-link active">Home</a>
+    <a href="#details" class="nav-link">Details</a>
+    <a href="#venue" class="nav-link">Venue</a>
+    <a href="#schedule" class="nav-link">Schedule</a>
+    <a href="#rsvp" class="nav-link">RSVP</a>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-bg">
+      <img src="images/hero-bg.png" alt="Wedding Background">
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <img src="images/floral-ornament.png" class="hero-ornament" alt="Floral Ornament">
+      <p class="hero-subtitle">We're Getting Married</p>
+      <h1 class="hero-names">
+        Tharaka
+        <span class="hero-amp">&</span>
+        Imasha
+      </h1>
+      <div class="hero-divider"></div>
+      <p class="hero-date">Monday, 25th May 2026 • 4:00 PM</p>
+    </div>
+    <a href="#details" class="hero-scroll">
+      <span>Scroll</span>
+      <div class="hero-scroll-line"></div>
+    </a>
+  </section>
+
+  <!-- Countdown Section -->
+  <section class="section countdown-section" id="countdown">
+    <div class="section-header reveal">
+      <p class="section-label">Save the Date</p>
+      <h2 class="section-title">Counting Down</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="countdown-container reveal">
+      <div class="countdown-item">
+        <div class="countdown-number" id="countDays">00</div>
+        <div class="countdown-label">Days</div>
+      </div>
+      <div class="countdown-item">
+        <div class="countdown-number" id="countHours">00</div>
+        <div class="countdown-label">Hours</div>
+      </div>
+      <div class="countdown-item">
+        <div class="countdown-number" id="countMinutes">00</div>
+        <div class="countdown-label">Minutes</div>
+      </div>
+      <div class="countdown-item">
+        <div class="countdown-number" id="countSeconds">00</div>
+        <div class="countdown-label">Seconds</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Details Section -->
+  <section class="section details-section" id="details">
+    <div class="section-header reveal">
+      <p class="section-label">Wedding Details</p>
+      <h2 class="section-title">Celebrate With Us</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="details-grid">
+      <div class="detail-card reveal">
+        <div class="detail-icon">📅</div>
+        <h3 class="detail-title">Date</h3>
+        <p class="detail-subtitle">Monday, 25th May 2026</p>
+        <p class="detail-text">Please join us on this beautiful day as we unite our hearts and souls forever.</p>
+      </div>
+      <div class="detail-card reveal">
+        <div class="detail-icon">🕓</div>
+        <h3 class="detail-title">Time</h3>
+        <p class="detail-subtitle">Ceremony at 4:00 PM</p>
+        <p class="detail-text">Reception to follow at 6:00 PM. Dinner and celebrations until midnight.</p>
+      </div>
+      <div class="detail-card reveal">
+        <div class="detail-icon">📍</div>
+        <h3 class="detail-title">Venue</h3>
+        <p class="detail-subtitle">Nethmi Hotel</p>
+        <p class="detail-text">Divulapitiya, Sri Lanka</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Venue / Map Section -->
+  <section class="section" id="venue">
+    <div class="section-header reveal">
+      <p class="section-label">Location</p>
+      <h2 class="section-title">Find Your Way</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="map-wrapper reveal">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15818.042367894!2d80.0186!3d7.2286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2f9e9c5b2a3b5%3A0x4b0b1b2b3b4b5b6b!2sDivulapitiya%2C%20Sri%20Lanka!5e0!3m2!1sen!2slk!4v1680000000000!5m2!1sen!2slk"
+        allowfullscreen
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Wedding Venue Location">
+      </iframe>
+      <div class="map-address">
+        <p class="map-address-text">📍 Nethmi Hotel, Divulapitiya, Sri Lanka</p>
+        <a href="https://www.google.com/maps/search/Nethmi+Hotel+Divulapitiya+Sri+Lanka" target="_blank" class="map-directions-btn">
+          🧭 Get Directions
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Schedule / Timeline Section -->
+  <section class="section timeline-section" id="schedule">
+    <div class="section-header reveal">
+      <p class="section-label">The Big Day</p>
+      <h2 class="section-title">Wedding Schedule</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="timeline reveal">
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <div class="timeline-time">3:30 PM</div>
+          <div class="timeline-event">Guest Arrival</div>
+          <div class="timeline-desc">Welcome drinks & light music</div>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <div class="timeline-time">4:00 PM</div>
+          <div class="timeline-event">Wedding Ceremony</div>
+          <div class="timeline-desc">Exchange of vows & rings</div>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <div class="timeline-time">5:00 PM</div>
+          <div class="timeline-event">Photo Session</div>
+          <div class="timeline-desc">Family & group photos</div>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <div class="timeline-time">6:00 PM</div>
+          <div class="timeline-event">Cocktail Hour</div>
+          <div class="timeline-desc">Drinks, canapés & entertainment</div>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <div class="timeline-time">7:00 PM</div>
+          <div class="timeline-event">Dinner & Toasts</div>
+          <div class="timeline-desc">Fine dining & heartfelt speeches</div>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <div class="timeline-time">9:00 PM</div>
+          <div class="timeline-event">Dance & Party</div>
+          <div class="timeline-desc">Open bar, DJ & dancing</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RSVP Section -->
+  <section class="section rsvp-section" id="rsvp">
+    <div class="section-header reveal">
+      <p class="section-label">Reply</p>
+      <h2 class="section-title">RSVP</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="rsvp-container reveal">
+      <form class="rsvp-form" id="rsvpForm">
+
+        <div class="form-group">
+          <label class="form-label" for="guestName">Your Full Name</label>
+          <input type="text" class="form-input" id="guestName" name="guestName" placeholder="Enter your full name" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Will You Attend?</label>
+          <div class="radio-group">
+            <div class="radio-option">
+              <input type="radio" id="attendYes" name="attendance" value="yes" required>
+              <label for="attendYes" class="radio-label">✨ Joyfully Accept</label>
+            </div>
+            <div class="radio-option">
+              <input type="radio" id="attendNo" name="attendance" value="no">
+              <label for="attendNo" class="radio-label">😢 Regretfully Decline</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="guestCount">Number of Guests</label>
+          <select class="form-select" id="guestCount" name="guestCount">
+            <option value="1">1 Guest</option>
+            <option value="2" selected>2 Guests</option>
+            <option value="3">3 Guests</option>
+            <option value="4">4 Guests</option>
+            <option value="5">5 Guests</option>
+            <option value="6">6 Guests</option>
+            <option value="7">7 Guests</option>
+            <option value="8">8 Guests</option>
+            <option value="9">9 Guests</option>
+            <option value="10">10 Guests</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Will You Have Liquor?</label>
+          <div class="radio-group">
+            <div class="radio-option">
+              <input type="radio" id="liquorYes" name="liquor" value="yes">
+              <label for="liquorYes" class="radio-label">🥂 Yes</label>
+            </div>
+            <div class="radio-option">
+              <input type="radio" id="liquorNo" name="liquor" value="no">
+              <label for="liquorNo" class="radio-label">🧃 No</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="guestMessage">Message for the Couple</label>
+          <textarea class="form-textarea" id="guestMessage" name="message" placeholder="Write your warm wishes, blessings, or any special requests..."></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn" id="submitBtn">
+          💌 Send Your RSVP
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p class="footer-names">Tharaka & Imasha</p>
+    <p class="footer-date">25 • 05 • 2026</p>
+    <div class="footer-divider"></div>
+    <p class="footer-text">Made with ❤️ for our special day</p>
+  </footer>
+
+  <!-- Success Modal -->
+  <div class="modal-overlay" id="successModal">
+    <div class="modal">
+      <div class="modal-icon">💌</div>
+      <h3 class="modal-title">Thank You!</h3>
+      <p class="modal-text" id="modalMessage">Your RSVP has been received. We're thrilled you'll be joining us on our special day!</p>
+      <button class="modal-close-btn" id="modalCloseBtn">Close</button>
+    </div>
+  </div>
+
+  <!-- Firebase SDK (Modular v12.11.0) -->
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/12.11.0/firebase-app.js";
+    import { getDatabase, ref, push } from "https://www.gstatic.com/firebasejs/12.11.0/firebase-database.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyA_UCWAfmeoq7FIrpAU0_qzUkp_dujXFlI",
+      authDomain: "tharaka-9039f.firebaseapp.com",
+      databaseURL: "https://tharaka-9039f-default-rtdb.firebaseio.com",
+      projectId: "tharaka-9039f",
+      storageBucket: "tharaka-9039f.firebasestorage.app",
+      messagingSenderId: "696741908217",
+      appId: "1:696741908217:web:9b738fc51639ab41989c28",
+      measurementId: "G-YC4C8X5RY0"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const db = getDatabase(app);
+    console.log('✅ Firebase initialized!');
+
+    // ===== RSVP Form — Firebase handler (must live in same module as db) =====
+    const rsvpForm = document.getElementById('rsvpForm');
+    const successModal = document.getElementById('successModal');
+    const modalCloseBtn = document.getElementById('modalCloseBtn');
+    const modalMessage = document.getElementById('modalMessage');
+
+    rsvpForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      const name = document.getElementById('guestName').value.trim();
+      const attendanceEl = document.querySelector('input[name="attendance"]:checked');
+      const guestCount = document.getElementById('guestCount').value;
+      const liquorEl = document.querySelector('input[name="liquor"]:checked');
+      const message = document.getElementById('guestMessage').value.trim();
+
+      if (!name || !attendanceEl) {
+        alert('Please fill in your name and attendance.');
+        return;
+      }
+
+      const rsvpData = {
+        name: name,
+        attendance: attendanceEl.value,
+        guestCount: guestCount,
+        liquor: liquorEl ? liquorEl.value : 'not selected',
+        message: message,
+        timestamp: new Date().toISOString()
+      };
+
+      try {
+        await push(ref(db, 'rsvps'), rsvpData);
+        console.log('✅ RSVP saved to Firebase!');
+
+        // Show success modal
+        if (attendanceEl.value === 'yes') {
+          modalMessage.textContent = 'Thank you, ' + name + '! We are thrilled you will be joining us with ' + guestCount + ' guest(s). See you there! 🎉';
+        } else {
+          modalMessage.textContent = 'Thank you, ' + name + ', for letting us know. We will miss you on our special day. 💝';
+        }
+        successModal.classList.add('active');
+        rsvpForm.reset();
+      } catch (err) {
+        console.error('❌ Firebase error:', err);
+        alert('Error saving RSVP: ' + err.message);
+      }
+    });
+
+    modalCloseBtn.addEventListener('click', () => {
+      successModal.classList.remove('active');
+    });
+
+    successModal.addEventListener('click', (e) => {
+      if (e.target === successModal) successModal.classList.remove('active');
+    });
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
