@@ -95,8 +95,8 @@ document.addEventListener('DOMContentLoaded', () => {
     /* ---- ENVELOPE ---- */
     .envelope {
       position: relative;
-      width: min(420px, 90vw);
-      height: min(290px, 65vw);
+      width: 420px;
+      height: 290px;
       cursor: pointer;
       perspective: 900px;
       transition: transform 0.3s ease;
@@ -105,6 +105,25 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     .envelope:hover:not(.opened) {
       transform: translateY(-8px) scale(1.03);
+    }
+    /* Scale down on small screens to keep triangle borders correct */
+    @media (max-width: 520px) {
+      .envelope {
+        transform: scale(0.78);
+        transform-origin: center center;
+      }
+      .envelope:hover:not(.opened) {
+        transform: scale(0.78) translateY(-8px);
+      }
+    }
+    @media (max-width: 380px) {
+      .envelope {
+        transform: scale(0.65);
+        transform-origin: center center;
+      }
+      .envelope:hover:not(.opened) {
+        transform: scale(0.65) translateY(-8px);
+      }
     }
 
     /* Body */
