@@ -102,27 +102,27 @@ document.addEventListener('DOMContentLoaded', () => {
       transition: transform 0.3s ease;
       filter: drop-shadow(0 28px 56px rgba(50,10,120,0.45));
       z-index: 2;
+      transform: scale(0.78);
+      transform-origin: center center;
     }
     .envelope:hover:not(.opened) {
-      transform: translateY(-8px) scale(1.03);
+      transform: scale(0.78) translateY(-8px);
     }
-    /* Scale down on small screens to keep triangle borders correct */
+    /* Scale down on small screens */
     @media (max-width: 520px) {
       .envelope {
-        transform: scale(0.78);
-        transform-origin: center center;
+        transform: scale(0.62);
       }
       .envelope:hover:not(.opened) {
-        transform: scale(0.78) translateY(-8px);
+        transform: scale(0.62) translateY(-8px);
       }
     }
     @media (max-width: 380px) {
       .envelope {
-        transform: scale(0.65);
-        transform-origin: center center;
+        transform: scale(0.52);
       }
       .envelope:hover:not(.opened) {
-        transform: scale(0.65) translateY(-8px);
+        transform: scale(0.52) translateY(-8px);
       }
     }
 
