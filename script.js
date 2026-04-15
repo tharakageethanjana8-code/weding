@@ -100,29 +100,29 @@ document.addEventListener('DOMContentLoaded', () => {
       cursor: pointer;
       perspective: 900px;
       transition: transform 0.3s ease;
-      filter: drop-shadow(0 28px 56px rgba(50,10,120,0.45));
+      filter: drop-shadow(0 20px 44px rgba(50,10,120,0.4));
       z-index: 2;
-      transform: scale(0.78);
+      transform: scale(0.65);
       transform-origin: center center;
     }
     .envelope:hover:not(.opened) {
-      transform: scale(0.78) translateY(-8px);
+      transform: scale(0.65) translateY(-8px);
     }
     /* Scale down on small screens */
     @media (max-width: 520px) {
       .envelope {
-        transform: scale(0.62);
+        transform: scale(0.5);
       }
       .envelope:hover:not(.opened) {
-        transform: scale(0.62) translateY(-8px);
+        transform: scale(0.5) translateY(-6px);
       }
     }
     @media (max-width: 380px) {
       .envelope {
-        transform: scale(0.52);
+        transform: scale(0.42);
       }
       .envelope:hover:not(.opened) {
-        transform: scale(0.52) translateY(-8px);
+        transform: scale(0.42) translateY(-6px);
       }
     }
 
