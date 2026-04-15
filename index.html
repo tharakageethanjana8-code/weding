@@ -348,9 +348,12 @@
 
       const name = document.getElementById('guestName').value.trim();
       const attendanceEl = document.querySelector('input[name="attendance"]:checked');
-      const guestCount = document.getElementById('guestCount').value;
+      const guestCountEl = document.getElementById('guestCount');
+      const guestCount = guestCountEl.options[guestCountEl.selectedIndex].value;
       const liquorEl = document.querySelector('input[name="liquor"]:checked');
       const message = document.getElementById('guestMessage').value.trim();
+
+      console.log('📋 Guest count selected:', guestCount);
 
       if (!name || !attendanceEl) {
         alert('Please fill in your name and attendance.');
@@ -360,7 +363,7 @@
       const rsvpData = {
         name: name,
         attendance: attendanceEl.value,
-        guestCount: guestCount,
+        guestCount: parseInt(guestCount),
         liquor: liquorEl ? liquorEl.value : 'not selected',
         message: message,
         timestamp: new Date().toISOString()
