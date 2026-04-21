@@ -271,19 +271,7 @@
           </select>
         </div>
 
-        <div class="form-group">
-          <label class="form-label">Will You Have Liquor?</label>
-          <div class="radio-group">
-            <div class="radio-option">
-              <input type="radio" id="liquorYes" name="liquor" value="yes">
-              <label for="liquorYes" class="radio-label">🥂 Yes</label>
-            </div>
-            <div class="radio-option">
-              <input type="radio" id="liquorNo" name="liquor" value="no">
-              <label for="liquorNo" class="radio-label">🧃 No</label>
-            </div>
-          </div>
-        </div>
+
 
         <div class="form-group">
           <label class="form-label" for="guestMessage">Message for the Couple</label>
@@ -350,7 +338,6 @@
       const attendanceEl = document.querySelector('input[name="attendance"]:checked');
       const guestCountEl = document.getElementById('guestCount');
       const guestCount = guestCountEl.options[guestCountEl.selectedIndex].value;
-      const liquorEl = document.querySelector('input[name="liquor"]:checked');
       const message = document.getElementById('guestMessage').value.trim();
 
       console.log('📋 Guest count selected:', guestCount);
@@ -364,7 +351,6 @@
         name: name,
         attendance: attendanceEl.value,
         guestCount: parseInt(guestCount),
-        liquor: liquorEl ? liquorEl.value : 'not selected',
         message: message,
         timestamp: new Date().toISOString()
       };
